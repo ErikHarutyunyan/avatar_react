@@ -39,7 +39,7 @@ export const Contact = () => {
               name="name"
               id="name"
               {...register("name")}
-              className="border-gray-300 rounded-lg focus:ring-aqua-400 focus:ring-2 focus:border-transparent"
+              className="border-gray-300 rounded-lg  focus:ring-2 focus:border-transparent"
               required
             />
           </label>
@@ -50,7 +50,7 @@ export const Contact = () => {
               name="email"
               id="email"
               {...register("email")}
-              className="border-gray-300 rounded-lg focus:ring-aqua-400 focus:ring-2 focus:border-transparent"
+              className="border-gray-300 rounded-lg  focus:ring-2 focus:border-transparent"
               required
             />
           </label>
@@ -62,7 +62,7 @@ export const Contact = () => {
               cols="30"
               rows="6"
               {...register("text")}
-              className="border-gray-300 rounded-lg focus:ring-aqua-400 focus:ring-2 focus:border-transparent"
+              className="border-gray-300 rounded-lg  focus:ring-2 focus:border-transparent"
             ></textarea>
           </label>
           <label htmlFor="terms" className="flex space-x-4">
@@ -70,7 +70,7 @@ export const Contact = () => {
               type="checkbox"
               name="terms"
               id="termKontakts"
-              className="border-gray-300 focus:ring-aqua-400 focus:ring-2 focus:border-transparent accent-aqua-400 focus:accent-aqua-400"
+              className="border-gray-300  focus:ring-2 focus:border-transparent accent-aqua-400 focus:accent-aqua-400"
             />
             <span className="text-sm text-neutral-500">
               {t("sectionContactText")}

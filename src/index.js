@@ -6,7 +6,7 @@ import { store } from "./app/store";
 import { BrowserRouter } from "react-router-dom";
 import { FontStyle } from "./themes/FontStyle";
 import "./index.css";
-import { GlobalStyle } from "./themes/GlobalStyle";
+import "./themes/globalStyle.css";
 import reportWebVitals from "./reportWebVitals";
 import "./i18n";
 // import setupInterceptors from "./services/setupInterceptors";
@@ -19,7 +19,6 @@ root.render(
   <Provider store={store}>
     <BrowserRouter>
       <FontStyle />
-      <GlobalStyle />
       <App />
     </BrowserRouter>
   </Provider>

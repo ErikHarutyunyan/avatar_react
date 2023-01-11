@@ -1,21 +1,19 @@
-import {useEffect,useRef,useState} from 'react'
+import { useEffect } from "react";
 
-const useHideShow = () => {
-    const [showLinks, setShowLinks] = useState(false);
-    const headerRef = useRef(null);
-    const childrenRef = useRef(null);
-  
-  
-    useEffect(() => {
-      const childrenHeight = childrenRef.current.getBoundingClientRect().height;
-      if (showLinks) {
-        headerRef.current.style.height = `${childrenHeight}px`;
-      } else {
-        headerRef.current.style.height = '0px';
+export const useHideShow = (ref, handler) => {
+  useEffect(() => {
+    const listener = (event) => {
+      // Do nothing if clicking ref's element or descendent elements
+      if (!ref.current || ref.current.contains(event.target)) {
+        return;
       }
-    }, [showLinks]);
-
-    return [headerRef,childrenRef, setShowLinks]
-}
-
-export default useHideShow
+      handler(event);
+    };
+    document.addEventListener("mousedown", listener);
+    document.addEventListener("touchstart", listener);
+    return () => {
+      document.removeEventListener("mousedown", listener);
+      document.removeEventListener("touchstart", listener);
+    };
+  }, [ref, handler]);
+};
