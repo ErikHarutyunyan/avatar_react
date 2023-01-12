@@ -20,6 +20,9 @@ import paymentIcon from "../assets/img/pay_met_icon.png";
 
 const initialState = {
   plan: null,
+  price: null,
+  sale: null,
+  total: null,
   modelGender: "women",
   modelId: null,
   modelName: null,
@@ -34,6 +37,12 @@ function reducer(state, action) {
   switch (action.type) {
     case "plan":
       return { ...state, plan: action.payload };
+    case "price":
+      return { ...state, price: action.payload };
+    case "sale":
+      return { ...state, sale: action.payload };
+    case "total":
+      return { ...state, total: action.payload };
     case "modelGender":
       return { ...state, modelGender: action.payload };
     case "modelId":
@@ -59,8 +68,10 @@ export const Create = () => {
   const [textSpeak, setTextSpeak] = useState("");
   const [voice, setVoice] = useState("Pl");
   const [plan, setPlan] = useState("");
+  const [salesPrice, setSalesPrice] = useState(0);
   const [dataForm, dispatch] = useReducer(reducer, initialState);
   console.log("dataForm :", dataForm);
+
   const { t } = useTranslation();
 
   const planRef = useRef(null);
@@ -115,6 +126,12 @@ export const Create = () => {
     switch (type) {
       case "plan":
         return dispatch({ type: "plan", payload: text });
+      case "price":
+        return dispatch({ type: "price", payload: text });
+      case "sale":
+        return dispatch({ type: "sale", payload: text });
+      case "total":
+        return dispatch({ type: "total", payload: text });
       case "modelGender":
         return dispatch({ type: "modelGender", payload: text });
       case "modelId":
@@ -138,6 +155,13 @@ export const Create = () => {
     }
   };
 
+  const handleSalesPrice = (price, tax = 6.5) => {
+    let salePrice = (price * tax) / 100;
+    onAdd(salePrice, "sale");
+    onAdd(price + salePrice, "total");
+    setSalesPrice(salePrice);
+  };
+
   return (
     <>
       <AvatarOptions active={active} setActive={setActive} />
@@ -158,7 +182,7 @@ export const Create = () => {
           <div className="imp pl-10 flex items-center gap-x-4">
             <IcImp />
             <span className="text-1xl font-semibold ">
-              Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+              {t("sectionPlanSubTitle")}
             </span>
           </div>
           <form action="#">
@@ -172,9 +196,12 @@ export const Create = () => {
                   className="hidden peer"
                 />
                 <div
+                  price={50}
                   onClick={(e) => {
                     e.preventDefault();
                     onAdd(e.target.innerText, "plan");
+                    onAdd(+e.target.attributes["price"].value, "price");
+                    handleSalesPrice(+e.target.attributes["price"].value);
                   }}
                   className={`px-12 cursor-pointer py-2.5 border-2 border-gray-400 rounded-full transition-colors peer-checked:border-green-400 peer-checked:text-green-400 ${
                     dataForm.plan === "Basic"
@@ -200,7 +227,7 @@ export const Create = () => {
           <div className="imp pl-10 flex items-center gap-x-4">
             <IcImp />
             <span className="text-1xl font-semibold ">
-              Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+              {t("sectionModelSubTitle")}
             </span>
           </div>
           <form action="#" className="mt-20">
@@ -272,7 +299,7 @@ export const Create = () => {
           <div className="imp pl-10 flex items-center gap-x-4">
             <IcImp />
             <span className="text-1xl font-semibold ">
-              Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+              {t("sectionTextSubTitle")}
             </span>
           </div>
           <div className="mt-20">
@@ -296,7 +323,7 @@ export const Create = () => {
           <div className="imp pl-10 flex items-center gap-x-4">
             <IcImp />
             <span className="text-1xl font-semibold ">
-              Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+              {t("sectionVoiceSubTitle")}
             </span>
           </div>
           <div className="mt-20 inline-flex align-end gap-x-72">
@@ -346,7 +373,7 @@ export const Create = () => {
           <div className="imp pl-10 flex items-center gap-x-4">
             <IcImp />
             <span className="text-1xl font-semibold ">
-              Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+              {t("sectionBackgroundSubTitle")}
             </span>
           </div>
           <div className="mt-20">
@@ -368,11 +395,11 @@ export const Create = () => {
           <div className="imp pl-10 flex items-center gap-x-4">
             <IcImp />
             <span className="text-1xl font-semibold ">
-              Lorem ipsum dolor sit amet enim. Etiam ullamcorper.
+              {t("sectionPaymentSubTitle")}
             </span>
           </div>
         </div>
-        <div className="container  payment-detals flex">
+        <div className="container  payment-details flex gap-x-20 mt-16">
           <div className="order">
             <div className="order-detals">
               <h3>{t("sectionOrderSum")}:</h3>
@@ -399,29 +426,30 @@ export const Create = () => {
                 </p>
               </div>
             </div>
-            <div className="order-pay">
-              <div className="subTotal">
-                <p>Subtotal</p> <p>374.00 zl</p>
-              </div>
-              <div className="sales">
-                <p>Sales</p>
-                <p>26.00 zl</p>
-              </div>
-              <div className="total">
-                <p>Total due</p>
-                <p>400.00 zl</p>
-              </div>
-              <div className="powred">
-                <p></p>
-                <img src={paymentIcon} alt="paymentIcon" />
-              </div>
-              <div className="finalTotal">
-                <p>Total to pay:</p>
-                <p>400.00 zl</p>
-              </div>
-              <div className="btnDiv">
-                <button>Proceed to checkout</button>
-              </div>
+          </div>
+          <div className="order-pay">
+            <div className="subTotal">
+              <p>{t("sectionOrderSubtotal")}</p>{" "}
+              <p>{dataForm.price && dataForm.price + " " + t("priceSymbol")}</p>
+            </div>
+            <div className="sales">
+              <p>{t("sectionOrderSales")}</p>
+              <p>{dataForm.price && dataForm.sale + " " + t("priceSymbol")}</p>
+            </div>
+            <div className="total">
+              <p>{t("sectionOrderTotalDue")}</p>
+              <p>{dataForm.total && dataForm.total + " " + t("priceSymbol")}</p>
+            </div>
+            <div className="powered">
+              <p>{t("sectionOrderPowered")}</p>
+              <img src={paymentIcon} alt="paymentIcon" />
+            </div>
+            <div className="finalTotal">
+              <p>{t("sectionOrderTotal")}</p>
+              <p>{dataForm.total && dataForm.total + " " + t("priceSymbol")}</p>
+            </div>
+            <div className="btnDiv">
+              <button>{t("sectionOrderCheckout")}</button>
             </div>
           </div>
         </div>

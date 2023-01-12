@@ -10,6 +10,7 @@
   "footerInfoPrivacy": "Polityka prywatności",
   "footerInfoCookies": "Polityka cookies",
   "footerInfoRegulations": "Regulamin",
+  "priceSymbol": "zł",
 
   "sectionHeroPlayVideo": "Odtwórz wideo",
 
@@ -79,22 +80,35 @@
 
   "sectionCreatorTitle": "Utwórz awatara w kilku prostych krokach.",
   "sectionPlanTitle": "Wybierz swoją ofertę",
+  "sectionPlanSubTitle": "Dostępne plany: basic.",
   "sectionModelTitle": "Wybierz modela/modelkę",
+  "sectionModelSubTitle": "Wybór płci awatara i jego twarzy.",
   "sectionModelMan": "Mężczyzna",
   "sectionModelWoman": "Kobieta",
   "sectionTextTitle": "Wpisz tekst",
+  "sectionTextSubTitle": "Wpisany tekst zostanie w całości wypowiedziany przez awatara.",
+  "sectionYorText": "Twój tekst",
+  "sectionYorTextPlaceholder": "Wpisz tekst...",
+  "sectionYorTextChart": "* za minutę nagrania przyjmuje się 1000 znaków",
+
   "sectionVoiceTitle": "Wybierz głos awatara",
+  "sectionVoiceSubTitle": "Dostępne rodzaje głosów: basic.  ",
   "sectionLanguageTitle": "Język",
   "sectionBackgroundTitle": "Wybierz tło",
+  "sectionBackgroundSubTitle": "Do wyboru jest białe lub zielone tło, które będzie znajdowało się pod twoim awatarem.",
+
   "sectionGreenscreenTitle": "Kolor tła",
   "sectionSelectColor": "Wybierz kolor",
   "sectionPayment": "Płatność",
+  "sectionPaymentSubTitle": "Podsumowanie zamówienia i jego szczegółowe informacje.",
+
   "sectionOrderSum": "Podsumowanie płatności:",
   "sectionOrderPlan": "Plan",
   "sectionOrderGender": "Płeć",
   "sectionOrderAvatar": "Wybrany",
   "sectionOrderNumber": "Liczba słów",
   "sectionOrderVoice": "Głos",
+
   "sectionOrderSubtotal": "Suma częściowa",
   "sectionOrderSales": "Podatek od sprzedaży (6.5%)",
   "sectionOrderTotalDue": "Całkowita należność",
