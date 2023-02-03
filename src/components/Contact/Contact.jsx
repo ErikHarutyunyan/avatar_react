@@ -62,8 +62,7 @@ export const Contact = () => {
               cols="30"
               rows="6"
               {...register("text")}
-              className="border-gray-300 rounded-lg  focus:ring-2 focus:border-transparent"
-            ></textarea>
+              className="border-gray-300 rounded-lg  focus:ring-2 focus:border-transparent"></textarea>
           </label>
           <label htmlFor="terms" className="flex space-x-4">
             <input
@@ -77,7 +76,9 @@ export const Contact = () => {
             </span>
           </label>
           <div className="pt-5 text-center">
-            <button type="submit" className="button">
+            <button
+              type="submit"
+              className="button relative button inline-flex px-8 py-2 lg:px-16 lg:py-3 rounded-full text-white font-bold lg:text-base text-sm">
               {t("sectionContactButton")}
             </button>
           </div>

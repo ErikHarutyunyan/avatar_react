@@ -1,4 +1,8 @@
 {
+  "langPolish": "Polish",
+  "langEnglish": "English",
+  "placeLang": "Select language",
+  "placeBg": "Select color",
   "headerItem1": "Advantages",
   "headerItem2": "About Us",
   "headerItem3": "Pricing",
@@ -94,7 +98,7 @@
   "sectionLanguageTitle": "Language",
   "sectionBackgroundTitle": "Choose background",
   "sectionBackgroundSubTitle": "Choice of the background behind your avatar: green or white.",
-  
+
   "sectionGreenscreenTitle": "Greenscreen color",
   "sectionSelectColor": "Select color",
   "sectionPayment": "Payment",
@@ -112,5 +116,6 @@
   "sectionOrderTotalDue": "Total due",
   "sectionOrderPowered": "Powered by",
   "sectionOrderTotal": "Total to pay",
-  "sectionOrderCheckout": "Proceed to checkout"
+  "sectionOrderCheckout": "Proceed to checkout",
+  "optionBackground": "Background"
 }

@@ -1,4 +1,8 @@
 {
+  "langPolish": "Polski",
+  "langEnglish": "Angielski",
+  "placeLang": "Wybierz język",
+  "placeBg": "Wybierz kolor",
   "headerItem1": "Korzyści",
   "headerItem2": "O nas",
   "headerItem3": "Cennik",
@@ -114,5 +118,6 @@
   "sectionOrderTotalDue": "Całkowita należność",
   "sectionOrderPowered": "Obsługiwana przez:",
   "sectionOrderTotal": "Total to pay:",
-  "sectionOrderCheckout": "Przejdź do płatności"
+  "sectionOrderCheckout": "Przejdź do płatności",
+  "optionBackground": "Tło"
 }

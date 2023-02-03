@@ -10,6 +10,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import TokenService from "../services/token.service";
 import { Create } from "../pages/Create";
+import Payment from "../pages/Payment";
 
 const Router = () => {
   const user = TokenService.getUser() || null;
@@ -22,6 +23,7 @@ const Router = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="/create" element={<Create />} />
+        <Route path="/payment" element={<Payment />} />
         <Route
           path="/profile"
           element={

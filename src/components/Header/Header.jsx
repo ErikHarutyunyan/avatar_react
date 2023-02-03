@@ -1,5 +1,5 @@
 import React from "react";
-import AvatarLogo from "../../assets/img/avatar-logo.svg";
+import AvatarLogo from "../../assets/img/lg.svg";
 
 // Scroll
 import AnchorLink from "react-anchor-link-smooth-scroll-v2";
@@ -24,7 +24,7 @@ export const Header = () => {
             <AnchorLink offset="100" href="#who">
               <Link to="/#who">{t("headerItem2")}</Link>
             </AnchorLink>
-            <AnchorLink offset="100" href="#pricing">
+            <AnchorLink offset="80" href="#pricing">
               <Link to="/#pricing"></Link>
               {t("headerItem3")}
             </AnchorLink>
@@ -40,8 +40,7 @@ export const Header = () => {
                 className="text-aqua-500 w-14"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+                stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -50,24 +49,27 @@ export const Header = () => {
                 />
               </svg>
             </Link>
-
-            <Link className="relative button" to={"create"}>
-              {t("creator")}{" "}
-              <span className="button-icon">
-                <svg
-                  className="w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </span>
-            </Link>
+            <div className="flex justify-center">
+              <Link
+                className="relative button inline-flex px-8 py-2 lg:px-16 lg:py-3 rounded-full text-white font-bold lg:text-base text-sm  shadow-md "
+                to={"create"}>
+                {t("creator")}{" "}
+                <span className="button-icon">
+                  <svg
+                    className="w-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      stroke="#fff"
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
       </header>

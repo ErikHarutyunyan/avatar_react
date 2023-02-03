@@ -1,67 +1,41 @@
-import modelAnna from "../../assets/img/annaModel.png";
-import modelTom from "../../assets/img/modelTom.jpg";
+import modelAlisha from "../../assets/video/Alisha.mp4";
+import modelMaia from "../../assets/video/Maia.mp4";
+import modelPaige from "../../assets/video/Paige.mp4";
+import modelEthan from "../../assets/video/Ethan.mp4";
+import modelJason from "../../assets/video/Jason.mp4";
+import modelWill from "../../assets/video/Will.mp4";
 
 export const dataModelWoman = [
   {
     id: 1,
-    name: "Anna",
-    modelImg: modelAnna,
+    name: "Alisha",
+    modelVideo: modelAlisha,
   },
   {
     id: 2,
-    name: "Anna",
-    modelImg: modelAnna,
+    name: "Maia",
+    modelVideo: modelMaia,
   },
   {
     id: 3,
-    name: "Anna",
-    modelImg: modelAnna,
-  },
-  {
-    id: 4,
-    name: "Anna",
-    modelImg: modelAnna,
-  },
-  {
-    id: 5,
-    name: "Anna",
-    modelImg: modelAnna,
-  },
-  {
-    id: 6,
-    name: "Anna",
-    modelImg: modelAnna,
+    name: "Paige",
+    modelVideo: modelPaige,
   },
 ];
 export const dataModelMan = [
   {
     id: 1,
-    name: "Tom",
-    modelImg: modelTom,
+    name: "Ethan",
+    modelVideo: modelEthan,
   },
   {
     id: 2,
-    name: "Tom",
-    modelImg: modelTom,
+    name: "Jason",
+    modelVideo: modelJason,
   },
   {
     id: 3,
-    name: "Tom",
-    modelImg: modelTom,
-  },
-  {
-    id: 4,
-    name: "Tom",
-    modelImg: modelTom,
-  },
-  {
-    id: 5,
-    name: "Tom",
-    modelImg: modelTom,
-  },
-  {
-    id: 6,
-    name: "Tom",
-    modelImg: modelTom,
+    name: "Will",
+    modelVideo: modelWill,
   },
 ];
