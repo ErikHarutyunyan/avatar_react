@@ -39,7 +39,7 @@ export const Text = ({ plan = "Basic", setTextSpeak = () => {}, onAdd }) => {
           </svg>
         </div>
       </div>
-      <div className="textForm pl-10">
+      <div className="textForm xl:pl-10 ">
         <label
           htmlFor="message"
           className="block mb-2 text-lg font-medium text-gray-900">

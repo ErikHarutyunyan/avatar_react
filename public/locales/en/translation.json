@@ -1,6 +1,9 @@
 {
   "langPolish": "Polish",
   "langEnglish": "English",
+  "colorGreen": "Green",
+  "colorBlue": "Blue",
+  "colorRed": "Red",
   "placeLang": "Select language",
   "placeBg": "Select color",
   "headerItem1": "Advantages",
@@ -78,7 +81,9 @@
   "sectionContactEmail": "Email",
   "sectionContactName": "Name",
   "sectionContactMessage": "Message",
-  "sectionContactText": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis",
+  "sectionContactText1": "I accept",
+  "sectionContactText3": "and",
+  "sectionContactText2": "Terms & Conditions",
   "sectionContactButton": "Send",
 
   "sectionCreatorTitle": "Create an Avatar in a few simple steps.",

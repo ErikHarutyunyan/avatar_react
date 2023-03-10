@@ -1,6 +1,9 @@
 {
   "langPolish": "Polski",
   "langEnglish": "Angielski",
+  "colorGreen": "Zielone",
+  "colorBlue": "Niebieskie",
+  "colorRed": "Czerwone",
   "placeLang": "Wybierz język",
   "placeBg": "Wybierz kolor",
   "headerItem1": "Korzyści",
@@ -58,7 +61,7 @@
   "sectionPlansBasicTool3": "Ponad 50 dostępnych języków",
   "sectionPlansBasicTool4": "Limit do 2000 znaków",
   "sectionPlansBasicTool5": "Białe lub zielone tło (greenscreen)",
-  "sectionPlanChoose": "Choose",
+  "sectionPlanChoose": "Wybierz",
   "sectionPlansPremiumTitle": "Oferta Premium",
   "sectionPlansPremiumPrice": "100 zł",
   "sectionPlansPremiumInfo": "za minutę nagrania",
@@ -79,7 +82,9 @@
   "sectionContactEmail": "Email",
   "sectionContactName": "Nazwa",
   "sectionContactMessage": "Wiadomość",
-  "sectionContactText": "Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. Phasellus fermentum in, dolor. Pellentesque facilisis",
+  "sectionContactText1": "Akceptuję",
+  "sectionContactText2": "Regulamin Użytkowania",
+  "sectionContactText3": "i",
   "sectionContactButton": "Wyślij",
 
   "sectionCreatorTitle": "Utwórz awatara w kilku prostych krokach.",
@@ -103,6 +108,7 @@
 
   "sectionGreenscreenTitle": "Kolor tła",
   "sectionSelectColor": "Wybierz kolor",
+
   "sectionPayment": "Płatność",
   "sectionPaymentSubTitle": "Podsumowanie zamówienia i jego szczegółowe informacje.",
 

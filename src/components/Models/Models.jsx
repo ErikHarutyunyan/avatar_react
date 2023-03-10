@@ -20,10 +20,14 @@ export const Models = ({ modelCat = "women", onAdd, dataForm }) => {
     // setInfoHover(false);
     e.target.playVideo();
   };
+  // grid max-4-6xl grid-cols-4
   return (
     <>
       <div className={`${modelCat}`}>
-        <div className="modelsBox grid max-4-6xl grid-cols-4 gap-3">
+        <div
+          className="modelsBox 
+        flex flex-wrap
+        gap-3">
           {data.map((item) => {
             const { id, name, modelVideo } = item;
             return (

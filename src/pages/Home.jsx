@@ -33,7 +33,9 @@ function Home() {
                 className="relative -z-10 lg:scale-100 xl:scale-150"
               />
               <div className="relative text-center lg:-top-5vh xl:top-0 ">
-                <Link to="#" className="button relative button inline-flex px-8 py-2 lg:px-16 lg:py-3 rounded-full text-white font-bold lg:text-base text-sm  shadow-md  hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out">
+                <Link
+                  to="#"
+                  className="button relative button inline-flex px-8 py-2 lg:px-16 lg:py-3 rounded-full text-white font-bold lg:text-base text-sm  shadow-md  hover:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out">
                   {videoLang === null || videoLang === "pl"
                     ? "Odtwórz wideo"
                     : "Play Video"}
@@ -91,8 +93,7 @@ function Home() {
                     : null
                 }`}
                 // onClick={() => changeLanguage("pi")}
-                onClick={() => setVideoLang("pl")}
-              >
+                onClick={() => setVideoLang("pl")}>
                 PI
               </button>
               <button
@@ -100,20 +101,17 @@ function Home() {
                 onClick={() => setVideoLang("en")}
                 className={`px-3 text-lg  transition-colors border-2 border-transparent rounded-full ${
                   videoLang === "en" ? "border-green-500 text-green-500" : null
-                }`}
-              >
+                }`}>
                 En
               </button>
               <button
                 // onClick={() => changeLanguage("de")}
-                className="px-3 text-lg  transition-colors border-2 border-transparent rounded-full"
-              >
+                className="px-3 text-lg  transition-colors border-2 border-transparent rounded-full">
                 De
               </button>
               <button
                 // onClick={() => changeLanguage("es")}
-                className="px-3 text-lg  transition-colors border-2 border-transparent rounded-full"
-              >
+                className="px-3 text-lg  transition-colors border-2 border-transparent rounded-full">
                 Es
               </button>
             </div>
@@ -123,14 +121,12 @@ function Home() {
       <div className="text-center my-5vh my-tvh">
         <AnchorLink
           href="#how"
-          className="border-2 inline-flex px-2 py-3.5 rounded-full text-green-400 border-green-400 hover:cursor-pointer group "
-        >
+          className="border-2 inline-flex px-2 py-3.5 rounded-full text-green-400 border-green-400 hover:cursor-pointer group ">
           <svg
             className="w-4 h-4 text-current group-hover:animate-bounce-small"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+            stroke="currentColor">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -210,20 +206,17 @@ function Home() {
                     className="mx-auto text-green-500 w-14"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="1"
-                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
+                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                   <span
                     className={`inline-block px-10 py-2 font-medium rounded-full outline-2 outline-green-500 ${
                       tabs === "1" ? "text-green-500" : "text-gray-500"
-                    }`}
-                  >
+                    }`}>
                     01
                   </span>
                 </div>
@@ -242,20 +235,17 @@ function Home() {
                     className="mx-auto text-green-500 w-14"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="1"
-                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
+                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                   <span
                     className={`inline-block px-10 py-2 font-medium rounded-full outline-2 outline-green-500 text-blue-500 ${
                       tabs === "2" ? "text-green-500" : "text-gray-500"
-                    }`}
-                  >
+                    }`}>
                     02
                   </span>
                 </div>
@@ -278,14 +268,12 @@ function Home() {
                     className="mx-auto text-green-500 w-14"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="1"
-                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
+                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                   <span
                     className={`inline-block px-10 py-2 font-medium rounded-full outline-2 outline-green-500 text-blue-500 ${
@@ -315,20 +303,17 @@ function Home() {
                     className="mx-auto text-green-500 w-14"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="1"
-                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
+                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                   <span
                     className={`inline-block px-10 py-2 font-medium rounded-full outline-2 outline-green-500 text-blue-500 ${
                       tabs === "4" ? "text-green-500" : "text-gray-500"
-                    }`}
-                  >
+                    }`}>
                     04
                   </span>
                 </div>
@@ -351,20 +336,17 @@ function Home() {
                     className="mx-auto text-green-500 w-14"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="1"
-                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    ></path>
+                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                   </svg>
                   <span
                     className={`inline-block px-10 py-2 font-medium rounded-full outline-2 outline-green-500 text-blue-500 ${
                       tabs === "5" ? "text-green-500" : "text-gray-500"
-                    }`}
-                  >
+                    }`}>
                     05
                   </span>
                 </div>
@@ -476,27 +458,23 @@ function Home() {
               />
             </div>
             <div className="relative z-10 max-w-lg mx-auto space-y-8 text-center xl:max-w-none xl:text-left ">
-              <h2 className="text-3xl  xl:text-5xl">O nas</h2>
+              <h2 className="text-3xl  xl:text-5xl">
+                {t("sectionAboutTitle")}
+              </h2>
               <p className="text-2xl text-gray-500 xl:text-3xl">
-                Jesteśmy właścicielami Casting Studio - jednego z największych
-                portali castingowych w Europie. Dzięki wieloletniej pracy w
-                branży modelingowej doskonale poznaliśmy potrzeby naszych
-                klientów. Nadszedł czas, aby pokazać Wam technologię, która na
-                nowo zdefiniuje proces produkcji filmowej z udziałem aktorów.
+                {t("sectionAboutText")}
               </p>
             </div>
           </div>
           <div className="btn-auto">
             <AnchorLink
               href="#pricing"
-              className="onas border-2 inline-flex px-2 py-3.5 rounded-full text-green-400 border-green-400 hover:cursor-pointer group "
-            >
+              className="onas border-2 inline-flex px-2 py-3.5 rounded-full text-green-400 border-green-400 hover:cursor-pointer group ">
               <svg
                 className="w-4 h-4 text-current group-hover:animate-bounce-small"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
+                stroke="currentColor">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"

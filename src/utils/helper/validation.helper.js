@@ -73,15 +73,21 @@ export const RESET_SCHEMA = yup.object().shape({
     .oneOf([yup.ref("password")], "Passwords does not match"),
 });
 
-export const CONTACT_SCHEMA = yup.object().shape({
-  name: yup
-    .string()
-    .max(40)
-    .min(3, "First Name must be at least 3 characters")
-    .required("Required First Name"),
-  email: yup
-    .string()
-    .email("Email should have correct format")
-    .required("Email is a required field"),
-  textArea: yup.string(),
-});
+export const CONTACT_SCHEMA = yup
+  .object()
+  .shape({
+    name: yup
+      .string()
+      .max(40)
+      .min(3, "Please fill all required fields.")
+      .required("Required First Name"),
+    email: yup
+      .string()
+      .email("Please fill all required fields.")
+      .required("Please fill all required fields."),
+    text: yup
+      .string()
+      .required("Please fill all required fields."),
+    choose: yup.bool().oneOf([true], "Please choose option."),
+  })
+  .required();

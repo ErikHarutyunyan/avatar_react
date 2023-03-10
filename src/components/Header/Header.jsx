@@ -1,5 +1,5 @@
 import React from "react";
-import AvatarLogo from "../../assets/img/lg.svg";
+import AvatarLogo from "../../assets/img/logo.png";
 
 // Scroll
 import AnchorLink from "react-anchor-link-smooth-scroll-v2";

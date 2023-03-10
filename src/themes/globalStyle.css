@@ -431,3 +431,8 @@ input[type="radio"].custom-radio:checked:hover {
 .StripeElement.PaymentRequestButton {
   padding: 0;
 }
+
+.modelItem {
+  max-width: 400px;
+  min-width: 300px;
+}

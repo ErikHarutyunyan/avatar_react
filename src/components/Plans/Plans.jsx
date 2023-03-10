@@ -172,7 +172,6 @@ export const Plans = () => {
                     state: {
                       plan: "Basic plan",
                       price: 50,
-                
                     },
                   });
                 }}>
@@ -296,7 +295,9 @@ export const Plans = () => {
             <h3 className="pricing-title">{t("sectionPlansCustomTitle")}</h3>
             <div className="price">
               {t("sectionPlansCustomPrice")}
-              {t("sectionPlansCustomInfo")}
+              <p className="text-xl leading-6 underline text-green-500">
+                {t("sectionPlansCustomInfo")}
+              </p>
             </div>
 
             <ul className="table-list">
@@ -446,7 +447,7 @@ export const Plans = () => {
               </span>
             </ul>
             <div className="table-buy">
-              <button>{t("footerInfoPrivacy")}</button>
+              <button>{t("sectionPlanChoose")}</button>
             </div>
           </div>
         </div>
